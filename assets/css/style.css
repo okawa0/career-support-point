@@ -44,11 +44,12 @@ body {
     max-width: 1080px;
 }
 
-.point__heading-wrap {
+.point__title {
     text-align: center;
 }
 
-.point__heading-en {
+.point__title-en {
+    display: block;
     margin: 0;
     background: transparent linear-gradient(90deg, #0080fe 0%, #6dfff0 100%) 0% 0% no-repeat padding-box;
     font-size: 64px;
@@ -56,17 +57,17 @@ body {
     line-height: 0.9;
     color: transparent;
     letter-spacing: 0.02em;
-    opacity: 0.2;
+    opacity: 0.3;
     -webkit-background-clip: text;
     background-clip: text;
 }
 
-.point__heading {
-    margin: -8px 0 0;
-    font-size: 20px;
-    font-weight: 700;
+.point__title-jp {
+    display: block;
+    margin: -4px 0 0;
+    font-size: 16px;
+    font-weight: 500;
     line-height: 1.4;
-    color: var(--color-secondary);
 }
 
 .point__list {
@@ -173,17 +174,17 @@ body {
     transform: translateX(6px);
 }
 
-@media screen and (min-width: 767px) {
+@media screen and (min-width: 768px) {
     .point {
         padding: 56px 40px 72px;
     }
 
-    .point__heading-en {
+    .point__title-en {
         font-size: 96px;
     }
 
-    .point__heading {
-        margin-top: -16px;
+    .point__title-jp {
+        margin-top: -8px;
         font-size: 24px;
     }
 
@@ -251,17 +252,25 @@ body {
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
     .point {
         padding: 72px 40px 88px;
     }
 
-    .point__heading-en {
+    .point__title {
+        position: relative;
+    }
+
+    .point__title-en {
         font-size: 120px;
     }
 
-    .point__heading {
-        margin-top: -20px;
+    .point__title-jp {
+        position: absolute;
+        top: 60%;
+        left: 790px;
+        transform: translate(-50%, -50%);
+        margin-top: 0;
         font-size: 26px;
     }
 
@@ -287,7 +296,7 @@ body {
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1441px) {
     .point {
         padding-top: 88px;
         padding-bottom: 104px;
@@ -297,7 +306,7 @@ body {
         max-width: 1160px;
     }
 
-    .point__heading-en {
+    .point__title-en {
         font-size: 136px;
     }
 }
