@@ -138,12 +138,12 @@ body {
     color: var(--color-text);
 }
 
-.point__button-wrap {
+.cta-wrap {
     margin-top: 36px;
     text-align: center;
 }
 
-.point__button {
+.cta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -161,16 +161,20 @@ body {
     transition: opacity 0.3s;
 }
 
-.point__button-icon {
+.cta-text {
+    font-size: 14px;
+}
+
+.cta-icon {
     display: inline-block;
     transition: transform 0.3s;
 }
 
-.point__button:hover {
+.cta:hover {
     opacity: 0.85;
 }
 
-.point__button:hover .point__button-icon {
+.cta:hover .cta-icon {
     transform: translateX(6px);
 }
 
@@ -196,26 +200,19 @@ body {
     .point-card {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
         align-items: center;
         gap: 0;
-    }
-
-    .point-card--reverse .point-card__body {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .point-card--reverse .point-card__image {
-        grid-column: 2;
-        grid-row: 1;
+        row-gap: 12px;
     }
 
     .point-card__body {
-        position: relative;
-        z-index: 1;
+        display: contents;
     }
 
     .point-card__title {
+        grid-column: 1;
+        grid-row: 1;
         font-size: 26px;
     }
 
@@ -228,12 +225,32 @@ body {
     }
 
     .point-card__image {
+        grid-column: 2;
+        grid-row: 1 / span 2;
         width: 100%;
     }
 
     .point-card__text-wrap {
-        margin-top: 12px;
+        grid-column: 1;
+        grid-row: 2;
         padding: 32px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .point-card--reverse .point-card__title {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .point-card--reverse .point-card__image {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    .point-card--reverse .point-card__text-wrap {
+        grid-column: 2;
+        grid-row: 2;
     }
 
     .point-card__text {
@@ -241,11 +258,11 @@ body {
         line-height: 1.9;
     }
 
-    .point__button-wrap {
+    .cta-wrap {
         margin-top: 64px;
     }
 
-    .point__button {
+    .cta {
         max-width: 360px;
         padding: 16px 48px;
         font-size: 16px;
@@ -268,7 +285,7 @@ body {
     .point__title-jp {
         position: absolute;
         top: 60%;
-        left: 790px;
+        left: calc(48% + 220px);
         transform: translate(-50%, -50%);
         margin-top: 0;
         font-size: 26px;
@@ -282,11 +299,15 @@ body {
         grid-template-columns: 55% 45%;
     }
 
-    .point-card__body {
+    .point-card__title,
+    .point-card__text-wrap {
         margin-right: -64px;
+        position: relative;
+        z-index: 1;
     }
 
-    .point-card--reverse .point-card__body {
+    .point-card--reverse .point-card__title,
+    .point-card--reverse .point-card__text-wrap {
         margin-right: 0;
         margin-left: -64px;
     }
