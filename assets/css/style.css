@@ -49,16 +49,8 @@ body {
 }
 
 .point__title-en {
-    display: block;
-    margin: 0;
+    width: 200px;
     background: transparent linear-gradient(90deg, #0080fe 0%, #6dfff0 100%) 0% 0% no-repeat padding-box;
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 0.9;
-    color: transparent;
-    letter-spacing: 0.02em;
-    opacity: 0.3;
-    -webkit-background-clip: text;
     background-clip: text;
 }
 
@@ -184,7 +176,7 @@ body {
     }
 
     .point__title-en {
-        font-size: 96px;
+        width: 300px;
     }
 
     .point__title-jp {
@@ -284,7 +276,7 @@ body {
 
     .point__title-jp {
         position: absolute;
-        top: 60%;
+        top: 50%;
         left: calc(48% + 220px);
         transform: translate(-50%, -50%);
         margin-top: 0;
@@ -303,7 +295,7 @@ body {
     .point-card__text-wrap {
         margin-right: -64px;
         position: relative;
-        z-index: 1;
+        z-index: 3;
     }
 
     .point-card--reverse .point-card__title,
@@ -314,6 +306,7 @@ body {
 
     .point-card__text-wrap {
         min-height: 150px;
+        z-index: -1;
     }
 }
 
