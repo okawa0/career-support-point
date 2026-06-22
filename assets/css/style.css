@@ -284,29 +284,49 @@ body {
     }
 
     .point-card {
-        grid-template-columns: 45% 55%;
+        grid-template-columns: 58% 55%;
     }
 
     .point-card--reverse {
         grid-template-columns: 55% 45%;
+        margin-left: -36px;
     }
 
-    .point-card__title,
-    .point-card__text-wrap {
+    .point-card__title {
         margin-right: -64px;
         position: relative;
         z-index: 3;
     }
 
-    .point-card--reverse .point-card__title,
-    .point-card--reverse .point-card__text-wrap {
-        margin-right: 0;
-        margin-left: -64px;
-    }
-
     .point-card__text-wrap {
+        margin-right: -64px;
+      padding: 40px 100px 40px 32px;
+        position: relative;
         min-height: 150px;
         z-index: -1;
+    }
+
+    .point-card--reverse .point-card__title {
+        gap: 32px;
+        margin-right: 0;
+        margin-left: -24px;
+    }
+
+    .point-card--reverse .point-card__text-wrap {
+        margin: 16px 0 0 -120px;
+        padding: 40px 32px 40px 100px;
+    }
+
+    .point-card__number {
+        font-size: 40px;
+    }
+
+    .point-card__label {
+        font-size: 32px;
+    }
+
+    .point-card__image {
+        width: 85%;
     }
 }
 
