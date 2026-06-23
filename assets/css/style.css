@@ -138,8 +138,6 @@ body {
     font-weight: 500;
     line-height: 30px;
     color: var(--color-text);
-    word-break: auto-phrase;
-    text-wrap: balance;
 }
 
 .cta-wrap {
@@ -304,6 +302,8 @@ body {
     }
 
     .point-card__text {
+        word-break: auto-phrase;
+        text-wrap: balance;
         font-size: 18px;
     }
 
